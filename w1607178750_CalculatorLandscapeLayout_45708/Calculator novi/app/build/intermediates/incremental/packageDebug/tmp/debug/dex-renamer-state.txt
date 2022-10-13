@@ -1,0 +1,4 @@
+#Sat Dec 05 15:27:38 CET 2020
+base.0=C\:\\Users\\Denijal\\Desktop\\IT Akademija\\OBAVEZNI\\Advanced Android UI Design and Programming\\Modul 5 - Optimizacija složenih UI struktura\\Calculator novi\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

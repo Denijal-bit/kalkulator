@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteY="73dp"
+    tools:ignore="MissingDefaultResource">
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:maxLines="3"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/clearButton"
+        style="@style/numberButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="handleClearButtonClick"
+        android:text="@string/clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/zeroButton"
+        app:layout_constraintTop_toBottomOf="@+id/nineButton" />
+
+    <Button
+        android:id="@+id/sevenButton"
+        style="@style/numberButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="handleNumericButtonClick"
+        android:text="@string/seven"
+        app:layout_constraintBottom_toTopOf="@+id/dotButton"
+        app:layout_constraintEnd_toStartOf="@+id/eightButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/fourButton" />
+
+    <Button
+        android:id="@+id/eightButton"
+        style="@style/numberButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="handleNumericButtonClick"
+        android:text="@string/eight"
+        app:layout_constraintBottom_toTopOf="@+id/zeroButton"
+        app:layout_constraintEnd_toStartOf="@+id/nineButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sevenButton"
+        app:layout_constraintTop_toBottomOf="@+id/fiveButton" />
+
+    <Button
+        android:id="@+id/nineButton"
+        style="@style/numberButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="handleNumericButtonClick"
+        android:text="@string/nine"
+        app:layout_constraintBottom_toTopOf="@+id/clearButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/eightButton"
+        app:layout_constraintTop_toBottomOf="@+id/sixButton" />
+
+    <Button
+        android:id="@+id/plusButton"
+        style="@style/operationButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="handleArithmeticButtonClick"
+        android:text="@string/plus"
+        app:layout_constraintBottom_toTopOf="@id/minusButton"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/fourButton"
+        style="@style/numberButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="handleNumericButtonClick"
+        android:text="@string/four"
+        app:layout_constraintBottom_toTopOf="@+id/sevenButton"
+        app:layout_constraintEnd_toStartOf="@+id/fiveButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/oneButton" />
+
+    <Button
+        android:id="@+id/fiveButton"
+        style="@style/numberButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="handleNumericButtonClick"
+        android:text="@string/five"
+        app:layout_constraintBottom_toTopOf="@+id/eightButton"
+        app:layout_constraintEnd_toStartOf="@+id/sixButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fourButton"
+        app:layout_constraintTop_toBottomOf="@+id/twoButton" />
+
+    <Button
+        android:id="@+id/sixButton"
+        style="@style/numberButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="handleNumericButtonClick"
+        android:text="@string/six"
+        app:layout_constraintBottom_toTopOf="@+id/nineButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fiveButton"
+        app:layout_constraintTop_toBottomOf="@+id/threeButton" />
+
+    <Button
+        android:id="@+id/minusButton"
+        style="@style/operationButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="handleArithmeticButtonClick"
+        android:text="@string/minus"
+        app:layout_constraintBottom_toTopOf="@id/multiplyButton"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/plusButton"/>
+
+    <Button
+        android:id="@+id/oneButton"
+        style="@style/numberButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="handleNumericButtonClick"
+        android:text="@string/one"
+        app:layout_constraintEnd_toStartOf="@+id/twoButton"
+        app:layout_constraintBottom_toTopOf="@id/fourButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/twoButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="handleNumericButtonClick"
+        android:text="@string/two"
+        app:layout_constraintBottom_toTopOf="@+id/fiveButton"
+        app:layout_constraintEnd_toStartOf="@id/threeButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/oneButton"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/numberButton" />
+
+    <Button
+        android:id="@+id/threeButton"
+        style="@style/numberButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="handleNumericButtonClick"
+        android:text="@string/three"
+        app:layout_constraintBottom_toTopOf="@+id/sixButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/twoButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/multiplyButton"
+        style="@style/operationButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="handleArithmeticButtonClick"
+        android:text="@string/multiply"
+        app:layout_constraintBottom_toTopOf="@id/divideButton"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/minusButton" />
+
+    <Button
+        android:id="@+id/dotButton"
+        style="@style/numberButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="handleNumericButtonClick"
+        android:text="@string/dot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/zeroButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/sevenButton" />
+
+    <Button
+        android:id="@+id/zeroButton"
+        style="@style/numberButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="handleNumericButtonClick"
+        android:text="@string/zero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/clearButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dotButton"
+        app:layout_constraintTop_toBottomOf="@+id/eightButton" />
+
+    <Button
+        android:id="@+id/equalButton"
+        style="@style/operationButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="handleEqualsButtonClick"
+        android:text="@string/equal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/divideButton"/>
+
+    <Button
+        android:id="@+id/divideButton"
+        style="@style/operationButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="handleArithmeticButtonClick"
+        android:text="@string/devide"
+        app:layout_constraintBottom_toTopOf="@id/equalButton"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/multiplyButton"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+</android.support.constraint.ConstraintLayout>
+
